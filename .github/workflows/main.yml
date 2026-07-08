@@ -302,7 +302,7 @@ jobs:
     - name: Push Docker Image
       run: |
         docker tag ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} ${{ secrets.DOCKER_USER }}/${{ env.REPO }}
-        docker push $IMAGE_NAME:${{ github.sha }}
+        docker push ${{ secrets.DOCKER_USER }}/${{ env.REPO }}:${{ env.IMAGE_TAG }}
 
 # Verify Container Starts
   
