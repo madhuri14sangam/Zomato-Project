@@ -38,7 +38,7 @@ concurrency:
   
 env:
   NODE_VERSION: "22"
-  IMAGE_NAME: rahamshaik/zomato
+  IMAGE_NAME: madhuri14sangam/zomato
   IMAGE_TAG: ${{ github.sha }}
   REPO: nodejsimage
  
