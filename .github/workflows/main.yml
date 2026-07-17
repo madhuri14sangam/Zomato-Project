@@ -300,10 +300,6 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
 #  Push Image
- #   - name: Push Docker Image
-  #    run: |
-  #      docker push ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
-  #      docker push ${{ env.IMAGE_NAME }}:latest 
     - name: Push Docker Image
       run: |
        docker tag ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} ${{ secrets.DOCKER_USER }}/${{ env.REPO }}:${{ env.IMAGE_TAG}}
